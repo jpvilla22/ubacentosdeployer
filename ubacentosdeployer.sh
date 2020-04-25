@@ -101,7 +101,7 @@ echo -----------
 echo Substep 4.2 - Setting IP Config 
 grep HWADDR $ipcfg > /root/hwaddr.txt
 echo "#Config added automatically by UBA CentOS7 Deployer (c)2020 JPV" > $ipcfg
-cat /root/hwaddr >> $ipcfg
+cat /root/hwaddr.txt >> $ipcfg
 echo >> $ipcfg
 echo NAME=$ethname >> $ipcfg
 echo DEVICE=$ethdevice >> $ipcfg
