@@ -24,7 +24,7 @@ ipdepl=$1 # Desired final IP of the VM deployment
 hndepl=$2 # Desired hostname of the VM deployment
 pwdepl=$3 # Desired final root password
 
-# Other variables - all your tinkering effort should be focused here, considering that this script is truly useful 
+# Other variables - all your tinkering should be here, if this script is gonna be truly useful 
 tmppw="defaultrootpassword" # Temporary default root password of the template
 dynip="10.10.10.10" # Unique temporary IP assigned by your DHCP server on provisioning VLAN upon template spawn.
 ipcfg="/etc/sysconfig/network-scripts/ifcfg-ens192" # Location of ifcfg file on the template
