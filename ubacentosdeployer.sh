@@ -4,7 +4,7 @@
 if [ -z $3 ]; then
 		echo "UBA VMs Provisioning CentOS7 Deployer Script v0.9"
 		echo
-        echo "Please complete with desired IP, Hostname and root password"
+		echo "Please complete with desired IP, Hostname and root password"
 		echo
 		echo "       example: ubacentosdeployer.sh 10.10.10.200 server rootpw"
 		echo
@@ -29,8 +29,8 @@ ipcfg="/etc/sysconfig/network-scripts/ifcfg-ens192" # Location of ifcfg file on 
 ethname="ens192" # Name of ethernet device on NAME section of the syconfig file   
 ethdevice="ens192" # Ethernet device on DEVICE section of the sysconfig file
 dgway="10.10.10.1" # Desired default gateway on sysconfig file
-dns1="8.8.8.8" # Desired dns config 1
-dns2="8.8.4.4" # Desired dns config 2 
+dns1="8.8.8.8" # Desired dns config 1 on sysconfig file
+dns2="8.8.4.4" # Desired dns config 2 on sysconfig file
  
 # Proper execution of the script
 echo "UBA VMs Provisioning CentOS7 Deployer Script v0.9 - (c)JPV 2020"
@@ -46,15 +46,15 @@ echo
 echo $dynip > host.txt
 
 # Put a specific mkdir instruction on a temporary local file for later use
-echo "mkdir /.ssh" > mkdirssh.txt
+echo "mkdir ~/.ssh" > mkdirssh.txt
 
 # Set authorized_keys to a temporary local file for later use
 echo "ssh-rsa use your own keys        \
 you can break it with these backlashes \
 for proper script presentation         \
 ldjd39edf9f9f9/ user@host" > authorized_keys
-echo "ssh-rsa another example key                           \
-you can generate keys on your admin workstation by running: \
+echo "ssh-rsa this is another example key                   \
+you can generate keys on your own workstation by running:   \
 ssh-keygen -q -N ""    (leave default answer)               \
 then look for a file (.ssh/id_rsa.pub) on your disk         \
 and paste it here - no ssh-copy-id needed with this method  \
