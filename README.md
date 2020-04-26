@@ -1,2 +1,2 @@
 # ubacentosdeployer
-Deployer automatizado de VMs CentOS para UBA
+Deployer automatizado de VMs CentOS y Clusters OKD para UBA
